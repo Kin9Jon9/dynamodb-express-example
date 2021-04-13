@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 const ddb = require('../model/movie');
 
-//내 논문 제목들 가져오기
 router.get('/', async (req, res) => {
   const { user_id } = req.query;
 
@@ -25,7 +24,6 @@ router.get('/', async (req, res) => {
   }
 })
 
-//내 논문 작성하기
 router.post('/', async (req, res) => {
   const { user_id } = req.query;
   try { 
@@ -46,7 +44,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-//내 논문 수정하기
 router.put('/:title', async (req, res) => {
   const { user_id } = req.query;
 
